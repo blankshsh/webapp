@@ -1,0 +1,86 @@
+/* H5对象的全局样式 */
+
+body,
+div,
+p,
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.h5_page {
+    background: url(../imgs/page_bg.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.h5_page_face {
+    background: url(../imgs/face_bg.png) no-repeat;
+    background-size: 100% 100%;
+
+
+}
+
+.h5_component_name_slogan {
+    animation: rock 2s infinite 2s;
+    -webkit-animation: rock 2s infinite 2s;
+}
+
+.h5_component {
+    background-size: 100%;
+}
+
+@-webkit-keyframes rock {
+    0% {
+        transform: rotate(0deg)
+    }
+    5% {
+        transform: rotate(3deg)
+    }
+    10% {
+        transform: rotate(-4deg)
+    }
+    15% {
+        transform: rotate(3deg)
+    }
+    20% {
+        transform: rotate(-2deg)
+    }
+    25% {
+        transform: rotate(1deg)
+    }
+    30% {
+        transform: rotate(-1deg)
+    }
+    70% {
+        transform: rotate(0deg)
+    }
+    0% {
+        transform: rotate(0deg)
+    }
+}
+
+.h5_component_name_caption {
+    background: url(../imgs/page_caption_bg.png);
+    width: 283px;
+    height: 160px;
+    text-align: center;
+    line-height: 140px;
+    font-size: 20px;
+    color: #fff;
+    background-size: 100%;
+    margin-top: -20px;
+}
+
+.h5_component_name_back {
+    top: 30px;
+    -webkit-animation: back 2s infinite 2s;
+}
+
+@-webkit-keyframes back {
+    50% {
+        top: 20px;
+    }
+}
