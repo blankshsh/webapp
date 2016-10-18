@@ -28,6 +28,11 @@ $(function() {
 
 
     h5
+        // .addPage()
+        // .addComponent("animation", {
+        //     type: 'animation',
+        //     center: true,
+        // })
         .addPage('face')
         .addComponent("logo", {
             width: 395,

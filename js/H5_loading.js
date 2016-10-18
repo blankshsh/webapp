@@ -1,12 +1,9 @@
 var H5_loading = function(images, firstPage) {
-
-
     var id = this.id;
     $(".h5").hide();
     if (this._images === undefined) { //第一次进入
         this._images = (images || []).length;
         this._loaded = 0;
-
         window[id] = this;
         for (s in images) {
             var item = images[s];
@@ -26,8 +23,12 @@ var H5_loading = function(images, firstPage) {
         }
     }
     window[id] = null;
-    $(".loading").hide();
-    $(".h5").show();
+    var bounce1 = $('<div class="double-bounce1">'),
+        bounce2 = $('<div class="double-bounce2">'),
+        bounce3 = $('<div class="double-bounce3">');
+    var loadbox = $('.loading');
+    loadbox.prepend(bounce3).prepend(bounce2).prepend(bounce1);
+    
     this.el.fullpage({
         onLeave: function(index, nextIndex, direction) {
             $(this).find(".h5_component").trigger('onLeave');
@@ -37,7 +38,12 @@ var H5_loading = function(images, firstPage) {
         }
     });
     this.page[0].find(".h5_component").trigger('onLoad');
-    this.el.show();
+    setTimeout(function() {
+        $(".loading").hide();
+        $(".h5").show();
+        //this.el.show();
+    }, 5000)
+    
     if (firstPage) {
         $.fn.fullpage.moveTo(firstPage);
     }

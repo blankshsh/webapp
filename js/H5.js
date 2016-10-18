@@ -35,6 +35,9 @@ var H5 = function() {
         var component;
         var page = this.page.slice(-1)[0];
         switch (cfg.type) {
+            case "animation":
+                component = new H5ComponentAnimation(name, cfg);
+                break;
             case "base":
                 component = new H5ComponentBase(name, cfg);
                 break;

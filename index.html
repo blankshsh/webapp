@@ -19,14 +19,15 @@
 
 <body>
     <div class="loading">
-        <div class="double-bounce1"></div>
+        <!-- <div class="double-bounce1"></div>
         <div class="double-bounce2"></div>
+        <div class="double-bounce3"></div> -->
         <div id="rate">0%</div>
     </div>
     <!-- 测试内容组织功能，以及fullPage页面切换&组件切换 -->
     <!-- 内容组织管理，有可能会加载若干个资源 -->
     <script type="text/javascript">
-    var res = ["Base", "Bar", "Bar_v", "Point", "Polyline", "Radar", "Pie", "Ring"];
+    var res = ["Base","Animation", "Bar", "Bar_v", "Point", "Polyline", "Radar", "Pie", "Ring"];
     var html = [];
     for (s in res) {
         html.push('<script type="text/javascript" src="./js/H5Component' + res[s] + '.js"><\/script>');
