@@ -1,5 +1,4 @@
 /* 内容管理对象 */
-
 var H5 = function() {
     this.id = ('h5_' + Math.random()).replace(".", "_");
     this.el = $('<div class="h5" id="' + this.id + '">');
@@ -80,6 +79,7 @@ var H5 = function() {
             $.fn.fullpage.moveTo(firstPage);
         }
     }
+    //如果H5_loading是函数 就覆盖this.loader
     this.loader = typeof H5_loading == 'function' ? H5_loading : this.loader;
     return this;
 }

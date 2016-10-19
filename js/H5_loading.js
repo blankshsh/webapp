@@ -1,9 +1,10 @@
 var H5_loading = function(images, firstPage) {
-    var id = this.id;
+    var id = this.id; //获取H5函数中的id
     $(".h5").hide();
     if (this._images === undefined) { //第一次进入
         this._images = (images || []).length;
         this._loaded = 0;
+        //把当前图片存储在window中，用来进行图片的加载之后的回调
         window[id] = this;
         for (s in images) {
             var item = images[s];
@@ -17,7 +18,9 @@ var H5_loading = function(images, firstPage) {
         return this;
     } else {
         this._loaded++;
+        //修改数值 并干掉小数部分
         $('#rate').text(((this._loaded / this._images * 100) >> 0) + '%');
+        //如果载入的资源还是小于图片内容的话 直接return
         if (this._loaded < this._images) {
             return this;
         }
@@ -42,9 +45,9 @@ var H5_loading = function(images, firstPage) {
         $(".loading").hide();
         $(".h5").show();
         //this.el.show();
-    }, 5000)
-    
+    }, 5500)
     if (firstPage) {
         $.fn.fullpage.moveTo(firstPage);
     }
+
 }

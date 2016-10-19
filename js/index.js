@@ -72,7 +72,7 @@ $(function() {
                 // left: 0,
                 opacity: 0
             },
-            delay: 500,
+            delay: 6000,
         })
         .addComponent('face_img_left', {
             width: 370,
@@ -97,7 +97,7 @@ $(function() {
                 left: -50,
                 bottom: -50,
             },
-            delay: 1000,
+            delay: 6500,
         })
         .addComponent('face_img_right', {
             width: 276,
@@ -122,7 +122,7 @@ $(function() {
                 right: -50,
                 bottom: -50,
             },
-            delay: 1000,
+            delay: 6500,
         })
         .addPage()
         .addComponent("caption", {
